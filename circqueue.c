@@ -5,14 +5,17 @@ void deq();
 void disp();
 int q[100], rear = -1, front = -1, ch, n;
 
-void main() {
+void main()
+{
     printf("\nEnter the number of elements in circular queue (max 100):\n");
     scanf("%d", &n);
-    do {
+    do
+    {
         printf("\nQueue operations\n1.Enqueue\n2.Dequeue\n3.Traversal\n4.Exit\n");
         printf("\nEnter your choice:\n");
         scanf("%d", &ch);
-        switch (ch) {
+        switch (ch)
+        {
             case 1:
                 enq();
                 break;
@@ -31,10 +34,11 @@ void main() {
     } while (ch != 4);
 }
 
-void enq() {
+void enq()
+{
     int value;
-    
-    if ((rear + 1) % n == front) {
+    if ((rear + 1) % n == front)
+    {
         printf("\nQueue is full. Cannot enqueue.\n");
         return;
     }
@@ -42,7 +46,8 @@ void enq() {
     printf("Enter the value to enqueue: ");
     scanf("%d", &value);
 
-    if (front == -1) {
+    if (front == -1)
+    {
         front = 0;
     }
     
@@ -51,34 +56,43 @@ void enq() {
     printf("Enqueued: %d\n", value);
 }
 
-void deq() {
-    if (front == -1) {
+void deq()
+{
+    if (front == -1)
+    {
         printf("\nQueue is empty. Cannot dequeue.\n");
         return;
     }
 
     int value = q[front];
-    if (front == rear) {
+    if (front == rear)
+    {
         front = rear = -1;
-    } else {
+    } else
+    {
         front = (front + 1) % n;
     }
-    
     printf("Dequeued: %d\n", value);
 }
 
 void disp() {
-    if (front == -1) {
+    if (front == -1)
+    {
         printf("\nQueue is empty.\n");
         return;
     }
 
     printf("Circular Queue: ");
     int i = front;
-    while (1) {
+    while (1)
+    {
         printf("%d ", q[i]);
-        if (i == rear) break;
-        i = (i + 1) % n;
+        if (i == rear)
+        {
+        	break;
+        	i = (i + 1) % n;
+        }
     }
     printf("\n");
 }
+
