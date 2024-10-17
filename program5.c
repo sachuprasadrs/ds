@@ -39,9 +39,9 @@ void display(struct Node* top) {
         return;
     }
     struct Node* current = top;
-    printf("Stack elements: ");
+    printf("Stack elements:\n");
     while (current != NULL) {
-        printf("%d ", current->data);
+        printf("%d \n", current->data);
         current = current->next;
     }
     printf("\n");
@@ -84,4 +84,3 @@ int main() {
 
     return 0;
 }
-
