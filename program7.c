@@ -5,8 +5,8 @@ int main()
 {
 	int i,j,k=0,t;
 	int u[N]={1,2,3,4,5,6,7,8,9,10};
-	int a[N]={1,3,4,5,7};
-	int b[N]={1,2,4,6,8,10};
+	int a[N]={1,3,4,5,8};
+	int b[N]={1,2,3,6,8,10};
 	int sa[N],sb[N],us[N],es[N],fs[N],c[N],d[N];
 	for(i=0;i<N;i++)
 	{
