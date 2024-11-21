@@ -1,7 +1,5 @@
 #include<stdio.h>
-
 #define MAX_SIZE 100
-
 int n;
 int graph[MAX_SIZE][MAX_SIZE];
 int visited[MAX_SIZE];
@@ -18,7 +16,6 @@ top++;
 stack[top] = data;
 }
 }
-
 void pop(){
 if(top==-1){
 printf("Stack is empty \n");
@@ -27,11 +24,9 @@ else {
 top--;
 }
 }
-
 int dfs(int startIndex){
 visited[startIndex] = 1;
 push(startIndex);
-
 printf("The visited node is \t");
 while(top != -1){
 int node = stack[top];
@@ -46,22 +41,17 @@ push(i);
 }
 return 0;
 }
-
 void main(){
-
 printf("Enter the no: of nodes : \n");
 scanf("%d",&n);
-
 printf("Enter the values of each node : \n");
 for(int i= 0; i < n; i++){
 printf("Node %d : ", i + 1);
 scanf("%d",&nodevalues[i]);
 }
-
 for(int i = 0; i < n; i++){
 visited[i] = 0;
 }
-
 printf("Enter 0 or 1 if there is an edge between the vertices \n");
 for(int i = 0; i < n; i++){
 for(int j = i + 1;j < n; j++){
@@ -79,19 +69,15 @@ graph[i][j] = graph[j][i] = 0;
 int startNode;
 printf("Enter the value of starting node : ");
 scanf("%d",&startNode);
-
 int startIndex = -1;
-
 for(int i = 0; i < n; i++){
 if(startNode == nodevalues[i]){
 startIndex = i;
 break;
 }
 }
-
 if(startIndex == -1){
 printf("invalid values you entered \n");
 }
-
 dfs(startIndex);
 }
