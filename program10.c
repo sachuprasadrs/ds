@@ -38,7 +38,7 @@ void prims()
 		selected[y] = 1; 
 		edge_count++;
 	}
-printf("\nTotal cost of the Minimum Spanning Tree: %d\n", total_cost);
+	printf("\nTotal cost of the Minimum Spanning Tree: %d\n", total_cost);
 }
 int main()
 {
